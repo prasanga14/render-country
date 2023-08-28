@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Render Country By name</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <% if(locals.name){ %> <% null %> <% }else { %>
+
+      <div class="box">
+        <h1>Render Country By Name</h1>
+        <form action="/submit" method="post">
+          <input
+            type="text"
+            name="countryName"
+            placeholder="Enter Country Name"
+            class="name"
+          />
+          <input type="submit" value="Render" class="submit" />
+        </form>
+      </div>
+
+      <% } %> <% if(locals.name){ %>
+      <div class="display">
+        <img src=" <%= locals.image %> " alt="" />
+        <h1>Name: <%= locals.name %></h1>
+        <h3>Population: <%= locals.population %></h3>
+        <h3>Border: <%= locals.border %></h3>
+        <h3>Continent: <%= locals.continent %></h3>
+      </div>
+
+      <% } else { null } %>
+    </div>
+  </body>
+</html>
