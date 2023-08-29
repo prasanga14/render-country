@@ -8,9 +8,14 @@
   </head>
   <body>
     <div class="container">
+      <!-- display this box only if country is not rendered  -->
       <% if(locals.name){ %> <% null %> <% }else { %>
 
       <div class="box">
+        <!-- if error message is sent then show this error  -->
+        <% if(locals.err) { %>
+        <span class="error">Country Name Not found. Try again!</span>
+        <% } %>
         <h1>Render Country By Name</h1>
         <form action="/submit" method="post">
           <input
@@ -23,6 +28,8 @@
         </form>
       </div>
 
+      <!-- if country is obtained from API render it  -->
+
       <% } %> <% if(locals.name){ %>
       <div class="display">
         <img src=" <%= locals.image %> " alt="" />
@@ -31,8 +38,7 @@
         <h3>Border: <%= locals.border %></h3>
         <h3>Continent: <%= locals.continent %></h3>
       </div>
-
-      <% } else { null } %>
+      <% } %>
     </div>
   </body>
 </html>

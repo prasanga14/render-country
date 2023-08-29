@@ -6,14 +6,9 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: white;
-}
-
 .box {
   align-items: center;
-  background-color: blueviolet;
-  color: white;
+  color: black;
   border-radius: 40px;
   display: flex;
   margin: auto;
@@ -27,7 +22,6 @@ body {
 
 .display {
   align-items: center;
-  background-color: #cecece;
   border-radius: 40px;
   display: flex;
   margin: auto;
@@ -51,8 +45,8 @@ h3 {
 .submit {
   margin-top: 15px;
   margin-left: 75px;
-  background-color: white;
-  color: blueviolet;
+  background-color: black;
+  color: white;
   font-size: 18px;
   font-family: 'Baloo 2', cursive;
   cursor: pointer;
@@ -68,4 +62,10 @@ h3 {
 
 img {
   width: 200px;
+}
+
+.error {
+  font-weight: bolder;
+  color: red;
+  font-size: 20px;
 }
